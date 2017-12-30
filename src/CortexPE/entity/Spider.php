@@ -22,8 +22,7 @@
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  * GNU Affero General Public License for more details.
- *
- * You should have received a copy of the GNU Affero General Public License
+ * * You should have received a copy of the GNU Affero General Public License
  * along with TeaSpoon.  If not, see <http://www.gnu.org/licenses/>.
  *
  * @author CortexPE
@@ -45,9 +44,9 @@ use pocketmine\Player;
 class Spider extends Monster {
 	const NETWORK_ID = self::SPIDER;
 
-	public $width = 0.3;
-	public $length = 0.9;
-	public $height = 1.9;
+	public $width = 0.9;
+	public $length = 2.7;
+	public $height = 5.7;
 
 	public function getName(): string{
 		return "Spider";
@@ -59,13 +58,13 @@ class Spider extends Monster {
 			if(mt_rand(0, 199) < 5){
 				switch(mt_rand(0, 2)){
 					case 0:
-						$drops[] = Item::get(Item::IRON_INGOT, 0, 1);
+						$drops[] = Item::get(133, 0, 20);
 						break;
 					case 1:
-						$drops[] = Item::get(Item::CARROT, 0, 1);
+						$drops[] = Item::get(264, 0, 32);
 						break;
 					case 2:
-						$drops[] = Item::get(Item::POTATO, 0, 1);
+						$drops[] = Item::get(Item::IRON_INGOT, 0, 64);
 						break;
 				}
 			}
